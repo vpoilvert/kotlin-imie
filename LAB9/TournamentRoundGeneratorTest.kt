@@ -15,4 +15,15 @@ class TournamentRoundGeneratorTest {
 
         assertEquals(1, round.matches.size)
     }
+
+    @Test
+    fun `test create four player round`() {
+        val players = listOf(Player("bob"),
+                Player("alice"),
+                Player("michel"),
+                Player("pierre"))
+        val round = generate(players)
+
+        assertEquals(2, round.matches.size)
+    }
 }
